@@ -5,7 +5,7 @@ title: document classification
 
 (c) HakOh 2018
 
-### 1. 개발 목적
+## 1. 개발 목적
 
 1) Web Crawler
 - 일반적으로, 데이터를 모으고 정리하는 것은 딥러닝을 활용한 자연어처리 프로젝트에서 정말 중요함.
@@ -22,9 +22,9 @@ title: document classification
 - 따라서, 이번 프로젝트에서 ‘입력층은 Word2vec 단어 embedding을
 연결한 문장, 그 후에 multiple filters를 가진 convolutional층, max-pooling 층을 연결하고, 마지막엔 softmax 분류기를 가지는’ 구조를 구현하고자 함.
 
-### 2. 개발 목표
+## 2. 개발 목표
 
-#### 1) 목표
+### 1) 목표
 
 (1) Web Crawler
 - 총 12개의 카테고리에 대하여 데이터 수집
@@ -49,7 +49,7 @@ title: document classification
 (4) Demo
 - Shutil module을 이용하여 실제 문서를 11개의 카테고리에 대해 분류.
 
-#### 2) 제약사항
+### 2) 제약사항
 
 (1) 크게 제한된 데이터 수
 - 기존의 1500만건 데이터를 모두 이용하려 했으나 2014년 이전 자료는 직접
@@ -57,20 +57,20 @@ title: document classification
 - 총 12개의 카테고리에 대해 분류하려 했으나 데이터 수가 10,000건도 되지 않은 카테고리가 있기 때문에 실제 사용하지 못할 수 있음.
 - 문서의 개인 정보 보안상의 문제, 데이터 서버의 안정성 문제 등으로 인해 크롤링이 원활하지 않음.
 
-### 3. 개발 내용
+## 3. 개발 내용
 
-#### 1) System Architecture
+### 1) System Architecture
 
 ![architecture](/images/architecture.png)
 
-#### 2) Web Crawler
+### 2) Web Crawler
 
 - BeautifulSoap(from bs4) 사용. - Selenium 사용.
 - 예외처리
   - 파일이 없거나 다른 형식의 파일(엑셀, 이미지)
   - 비공개, 정보 보안상 문제로 접근이 제한된 문서
 
-#### 3) Data Preprocessing
+### 3) Data Preprocessing
 
 (1) Web Crawler를 통해 받은 Pdf, Hwp 파일을 각각 Pdf2text pilot, HwpConv 프로그램을 이용해 Txt로 변환.
 
@@ -91,7 +91,7 @@ title: document classification
 Word2vec 실행.
 - 성능을 올리기 위해 Wiki Corpus 사용.
 
-#### 4) CNN for Document Classification
+### 4) CNN for Document Classification
 (1) Hyper parameters
 - Filter size = 3, 4, 5
 - #of Filter = 100
@@ -112,9 +112,9 @@ Word2vec 실행.
 
 (4) Softmax function
 
-### 4. 개발 결과
+## 4. 개발 결과
 
-#### 1)목표 달성 여부
+### 1)목표 달성 여부
 (1) Web Crawler
 - 총 11개의 카테고리에 대하여 데이터 수집
 - (2014-2018) 약 221,000건의 공공데이터 활용 (https://www.open.go.kr/)
@@ -144,7 +144,7 @@ Word2vec 실행.
 - Accuracy에 비해 낮은 분류 성능이 나와 현재 오류 개선 중.
 
 
-#### 2) 발전 가능성
+### 2) 발전 가능성
 (1) Vocab을 만들 때 품사 태깅 정보도 활용 하면 성능 개선에 훨씬 도움이 될 수 있음. (명사, 동사, 형용사, 부사 등의 content word 이용.)
 
 (2) 데이터가 턱 없이 부족한 상태로 진행을 하였기 때문에 데이터가 더 많다면 확실히 좋은 성능이 나올 것이라 기대함.
@@ -155,7 +155,7 @@ Word2vec 실행.
 
 (5) Word2vec 대신 Doc2Vec을 활용하면 성능개선이 가능하다. [2]
 
-### 5. Reference
+## 5. Reference
 
 [1] Kim, Y. (2014). Convolutional Neural Networks for Sentence
 Classification. Proceedings of the 2014 Conference on Empirical
