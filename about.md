@@ -8,4 +8,4 @@ permalink: /about/
 
 ### Contact me
 
-[haaaaak2@gmail.com](mailto:haaaaak2@gmail.com)
+[hakohmail@gmail.com](mailto:hakohmail@gmail.com)
