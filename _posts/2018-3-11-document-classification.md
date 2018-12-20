@@ -165,7 +165,7 @@ Methods in Natural Language Processing (EMNLP 2014), 1746–1751.
 Kim, Y. (2014). Convolutional Neural Networks for Sentence
 Classification. Proceedings of the 2014 Conference on Empirical
 Methods in Natural Language Processing (EMNLP 2014), 1746–1751.
-   
+
 [3] Kalchbrenner, N., Grefenstette, E., & Blunsom, P. (2014). A Convolutional Neural Network for Modelling Sentences. Acl, 655–665.
 
 [4] Santos, C. N. dos, & Gatti, M. (2014). Deep Convolutional Neural Networks for Sentiment Analysis of Short Texts. In COLING-2014 (pp.
